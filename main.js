@@ -22,10 +22,23 @@ Output =>
 [49, 20, 500]
 
 */
+// var arr = 
+function MultiByNum1OrNum2(arr,num1,num2) {
+  
+  // WRITE YOUR CODE UNDER THIS LINE 
+// arr=arr.map(x=>{
+// if(x%num1===0){
+//  return x*num1;
 
-function MultiByNum1OrNum2() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+
+// }else{
+//   return x*num2
+// }
+
+// })
+// return arr
 }
+// console.log(MultiByNum1OrNum2( [7,2,50],2,6))
 
 /* Q2:
 Using Filter
@@ -57,10 +70,23 @@ Output =>
   { name: "mercer",age:26}
 ]
 */
+//
+// 
+function longerAndYounger(arr, num1, num2) {
+  // WRITE YOUR CODE UNDER THIS LINE  
 
-function longerAndYounger() {
-  // WRITE YOUR CODE UNDER THIS LINE         
+  var array = arr.filter(x => {
+    var names= x.name;
+    var age = x.age;
+    if (names.length > num1 && age < num2)
+      return x;
+  })
+
+  return array;
 }
+
+
+// console.log(longerAndYounger(arr,4,30))
 
 /* Q3:
 Using Reduce
@@ -89,11 +115,11 @@ Output =>
 "alice, fried chiken, pizaa, burger, hot dog, eggs"
   
 */
-function nameAndAllFoods() {
+function nameAndAllFoods(arr,str) {
   // WRITE YOUR CODE UNDER THIS LINE         
 }
 
-
+fff
 /*
 Q4
 You need to write the solution in the q4.html file
@@ -111,3 +137,14 @@ You need to write the solution in the q4.html file
   a. when click on the button with id "no"  => cahnge the color of the div with class "main" to red
   b. when click on the button with id "yes" => cahnge the color of the div with class "main" to green
 */
+
+$(document).ready(function(){
+  $("#no").click(function(){
+    $(".main").css("background-color", "red");
+  });
+});
+$(document).ready(function(){
+  $("#yes").click(function(){
+    $(".main").css("background-color", "green");
+  });
+});
